@@ -1,0 +1,20 @@
+.animated {
+  animation-duration: 1s;
+
+  &-long {
+    animation-duration: 2s;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
