@@ -1,0 +1,8 @@
+nz-layout {
+  min-height: 100%;
+}
+
+.ant-layout-header {
+  height: 46px;
+  line-height: 46px;
+}
