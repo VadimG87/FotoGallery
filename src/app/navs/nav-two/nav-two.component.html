@@ -1,1 +1,17 @@
-<p>nav-two works!</p>
+<div class="animated fadeIn">
+  <div class="row">
+    <div *ngFor="let item of photos" class="col-lg-4">
+      <nz-card nzHoverable
+               style="width:320px"
+               class="mb-3"
+               [nzCover]="coverTmp">
+        <nz-card-meta [nzTitle]="item.title"
+                      [nzDescription]="item.description">
+        </nz-card-meta>
+      </nz-card>
+      <ng-template #coverTmp>
+        <img alt="example" [src]="'assets/my-children/' + item.path"/>
+      </ng-template>
+    </div>
+  </div>
+</div>
