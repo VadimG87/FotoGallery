@@ -1,18 +1,28 @@
 <div class="animated fadeIn">
   <div class="row">
-    <div *ngFor="let item of photos" class="col-lg-4">
-      <nz-card nzHoverable
-               style="width:320px"
-               class="mb-3"
-               [nzCover]="coverTmp">
+    <div *ngFor="let item of photos" class="col-lg-4 mb-3">
+      <nz-card nzHoverable class="w-100 h-100" [nzCover]="coverTmp">
         <nz-card-meta [nzTitle]="item.title"
-                      [nzDescription]="item.description">
+                      [nzDescription]="item.description"
+                      [nzAvatar]="avatarTmp">
         </nz-card-meta>
       </nz-card>
       <ng-template #coverTmp>
         <img alt="example" [src]="'assets/my-children/' + item.path"/>
       </ng-template>
+      <ng-template #avatarTmp>
+        <nz-avatar [nzShape]="'square'" [nzSize]="item.avatarSize"
+                   [nzSrc]="'assets/my-children/' + item.path">
+        </nz-avatar>
+      </ng-template>
     </div>
   </div>
 </div>
-lol
+<nz-button-group>
+  <button (click)="onAvatarIncrease()" nz-button nzType="primary">
+    <i nz-icon nzType="plus"></i>
+  </button>
+  <button (click)="onAvatarDecrease()" nz-button nzType="primary">
+    <i nz-icon nzType="minus"></i>
+  </button>
+</nz-button-group>
