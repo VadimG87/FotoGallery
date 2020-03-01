@@ -1,1 +1,15 @@
-<p>nav-three works!</p>
+<div class="animated fadeIn">
+  <div class="row">
+    <div *ngFor="let item of photoswife">
+      <nz-card nzHoverable style="width:240px" [nzCover]="coverTemplate">
+        <nz-card-meta [nzTitle]="item.title" nzDescription="www.instagram.com">
+        </nz-card-meta>
+      </nz-card>
+    </div>
+  </div>
+</div>
+
+<ng-template #coverTemplate>
+  <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png"/>
+</ng-template>
+
